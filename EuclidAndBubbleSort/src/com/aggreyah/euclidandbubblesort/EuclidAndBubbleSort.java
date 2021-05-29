@@ -10,10 +10,9 @@ public class EuclidAndBubbleSort {
             return euclidGCD(secondNum, firstNum % secondNum);
     }
 
-    public int[] bubbleSort(int[] ints) {
-        for (int i = 0; i < ints.length - 1; i++){
-            int sorted = ints.length - i;
-            while(i != sorted){
+    public static int[] bubbleSort(int[] ints) {
+        for (int j = ints.length - 1; j >= 0; j--){
+            for (int i = 0; i < j; i++){
                 if (ints[i] > ints[i + 1]){
                     int temp = ints[i + 1];
                     ints[i + 1] = ints[i];
